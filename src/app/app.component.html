@@ -1,35 +1,63 @@
 <!-- Stepper -->
-<mat-stepper linear #stepper>
+<mat-stepper linear #stepper (selectionChange)="textContinueButton($event)">
   <router-outlet></router-outlet>
 
   <mat-step>
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Datos</ng-template>
       <initial-data></initial-data>
+
+      <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
     </form>
+
   </mat-step>
 
   <mat-step>
     <ng-template matStepLabel>Salud mental</ng-template>
+    <mental-health [result]="data.mentalHealth" (resultChange)="onResultChange($event)"></mental-health>
 
-    <mental-health [result]="probando" (resultChange)="onResultChange($event)"></mental-health>
+    <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>
 
   <mat-step>
     <ng-template matStepLabel>Salud emocional</ng-template>
+
+    <!-- TODO -->
+
+    <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>
 
   <mat-step>
     <ng-template matStepLabel>Relaciones sociales</ng-template>
+
+    <!-- TODO -->
+
+    <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>
 
   <mat-step>
     <ng-template matStepLabel>Relaciones familiares</ng-template>
+
+    <!-- TODO -->
+
+    <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>
 
   <mat-step>
     <ng-template matStepLabel>Sentido del proposito</ng-template>
+
+    <!-- TODO -->
+
+    <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>
+
+
+
 </mat-stepper>
 
-<button (click)="prueba()">PRUEBA</button>
+<ng-template #stepperButtons>
+  <div class="buttons">
+    <button mat-stroked-button color="primary" (click)="stepper.previous()">Atras</button>
+    <button mat-raised-button color="primary" (click)="stepper.next()">{{continueButtonText}}</button>
+  </div>
+</ng-template>

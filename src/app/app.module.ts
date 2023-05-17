@@ -14,6 +14,8 @@ import { InitialDataComponent } from './initial-data/initial-data.component';
 import { MentalHealthComponent } from './mental-health/mental-health.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { CdkStepperModule } from '@angular/cdk/stepper';
 
 @NgModule({
   declarations: [AppComponent, InitialDataComponent, MentalHealthComponent],
@@ -28,6 +30,8 @@ import { FormsModule } from '@angular/forms';
     MatRadioModule,
     CommonModule,
     FormsModule,
+    MatButtonModule,
+    CdkStepperModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

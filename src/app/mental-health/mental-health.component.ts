@@ -13,7 +13,7 @@ import {
 export class MentalHealthComponent {
   // @Output() result = new EventEmitter<number>();
 
-  @Input() result!: number;
+  @Input() result?: number;
   @Output() resultChange = new EventEmitter<number>();
 
   questionary = new MentalHealth().getQuestionary();
