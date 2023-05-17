@@ -5,11 +5,12 @@
     <div class="question">{{quest.question}}</div>
     <div class="answer">
       <mat-radio-group class="options"
-      (change)="quest.valueChoiced = +$event.value; valueChanged()">
+      >
         <mat-radio-button
           *ngFor="let option of quest.options"
           class="option"
           value={{option.value}}
+          (change)="quest.valueChoiced = +$event.value; valueChanged()"
           >
             {{option.answer}}
           </mat-radio-button>

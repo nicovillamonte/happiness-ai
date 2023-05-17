@@ -9,6 +9,8 @@ import { Validators, FormBuilder } from '@angular/forms';
 export class AppComponent {
   title = 'happiness-ai';
 
+  probando!: number;
+
   data = {
     mentalHealth: 0,
   };
@@ -20,6 +22,11 @@ export class AppComponent {
   constructor(private _formBuilder: FormBuilder) {}
 
   prueba() {
-    console.log(this.data);
+    // console.log(this.data);
+    console.log(this.probando);
+  }
+
+  onResultChange(newValue: number) {
+    this.probando = newValue;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {
   MentalHealth,
   MentalHealthAnswerDTO,
@@ -11,7 +11,10 @@ import {
   styleUrls: ['./mental-health.component.scss'],
 })
 export class MentalHealthComponent {
-  @Output() result = new EventEmitter<number>();
+  // @Output() result = new EventEmitter<number>();
+
+  @Input() result!: number;
+  @Output() resultChange = new EventEmitter<number>();
 
   questionary = new MentalHealth().getQuestionary();
 
@@ -21,8 +24,10 @@ export class MentalHealthComponent {
 
   valueChanged() {
     try {
-      let res = getMentalHealthResult(this.questionary);
-      this.result.emit(res);
+      let res: number = getMentalHealthResult(this.questionary);
+
+      this.result = res;
+      this.resultChange.emit(res);
     } catch (error) {}
   }
 }

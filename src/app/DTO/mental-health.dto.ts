@@ -24,7 +24,7 @@ export function getMentalHealthResult(
   questionary.questions.forEach((question) => {
     if (question.valueChoiced == null)
       throw Error('Todos los campos son obligatorios.');
-    result += question.valueChoiced;
+    result += question.valueChoiced ? question.valueChoiced : 0;
   });
 
   return result;
