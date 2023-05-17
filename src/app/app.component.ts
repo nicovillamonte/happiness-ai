@@ -9,9 +9,17 @@ import { Validators, FormBuilder } from '@angular/forms';
 export class AppComponent {
   title = 'happiness-ai';
 
+  data = {
+    mentalHealth: 0,
+  };
+
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
 
   constructor(private _formBuilder: FormBuilder) {}
+
+  prueba() {
+    console.log(this.data);
+  }
 }

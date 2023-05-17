@@ -13,6 +13,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { InitialDataComponent } from './initial-data/initial-data.component';
 import { MentalHealthComponent } from './mental-health/mental-health.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, InitialDataComponent, MentalHealthComponent],
@@ -26,6 +27,7 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     MatRadioModule,
     CommonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -12,7 +12,7 @@
   <mat-step>
     <ng-template matStepLabel>Salud mental</ng-template>
 
-    <mental-health></mental-health>
+    <mental-health (result)="data.mentalHealth"></mental-health>
   </mat-step>
 
   <mat-step>
@@ -32,3 +32,4 @@
   </mat-step>
 </mat-stepper>
 
+<button (click)="prueba()">PRUEBA</button>

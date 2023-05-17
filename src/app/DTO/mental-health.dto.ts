@@ -3,6 +3,7 @@ import { MENTAL_HEALTH_QUEST } from '../JSON/menta-health-quest';
 export interface MentalHealthQuestionDTO {
   question: string;
   options: MentalHealthAnswerDTO[];
+  valueChoiced?: number;
 }
 
 export interface MentalHealthAnswerDTO {
@@ -20,16 +21,11 @@ export function getMentalHealthResult(
 ): number {
   let result = 0;
 
-  questionary.questions
-    .map((question) => {
-      question.options.find((option) => option.choiced)?.value;
-    })
-    .forEach((value) => {
-      if (value == null) {
-        throw Error('Todos los campos son obligatorios.');
-      }
-      result += value;
-    });
+  questionary.questions.forEach((question) => {
+    if (question.valueChoiced == null)
+      throw Error('Todos los campos son obligatorios.');
+    result += question.valueChoiced;
+  });
 
   return result;
 }
