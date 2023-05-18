@@ -1,0 +1,20 @@
+<div class="table-container" *ngFor="let item of questionary.items; let i = index">
+  <h2>{{item.question}}</h2>
+  <table>
+
+    <tr >
+      <td class="left">
+        <p>{{item.left}}</p>
+      </td>
+      <td class="middle">
+        <!-- Slider -->
+        <mat-slider color="secondary" min="1" max="7" step="1" value="1">
+          <input matSliderThumb>
+        </mat-slider>
+      </td>
+      <td class="rigth">
+        <p>{{item.right}}</p>
+      </td>
+    </tr>
+  </table>
+</div>

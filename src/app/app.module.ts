@@ -19,6 +19,8 @@ import { CdkStepperModule } from '@angular/cdk/stepper';
 import { EmotionalHealthComponent } from './emotional-health/emotional-health.component';
 import { SocialRealationComponent } from './social-realation/social-realation.component';
 import { FamilyRelationComponent } from './family-relation/family-relation.component';
+import { PurposeSenseComponent } from './purpose-sense/purpose-sense.component';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { FamilyRelationComponent } from './family-relation/family-relation.compo
     EmotionalHealthComponent,
     SocialRealationComponent,
     FamilyRelationComponent,
+    PurposeSenseComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { FamilyRelationComponent } from './family-relation/family-relation.compo
     FormsModule,
     MatButtonModule,
     CdkStepperModule,
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

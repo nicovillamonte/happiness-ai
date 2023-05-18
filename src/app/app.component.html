@@ -38,7 +38,6 @@
   <mat-step>
     <ng-template matStepLabel>Relaciones familiares</ng-template>
 
-    <!-- TODO -->
     <family-relation [result]="data.familyRelation" (resultChange)="onResultChange($event,'familyRelation')"></family-relation>
 
     <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
@@ -48,6 +47,7 @@
     <ng-template matStepLabel>Sentido del proposito</ng-template>
 
     <!-- TODO -->
+    <purpose-sense></purpose-sense>
 
     <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>

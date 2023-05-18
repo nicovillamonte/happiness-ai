@@ -11,7 +11,7 @@ export class FamilyRelationComponent {
   @Input() result?: number;
   @Output() resultChange = new EventEmitter<number>();
 
-  questionary = FamilyRelation.getQuestionary();
+  questionary = FamilyRelation.getInventary();
 
   valueChanged() {
     try {
