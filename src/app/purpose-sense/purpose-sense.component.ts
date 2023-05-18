@@ -13,10 +13,16 @@ export class PurposeSenseComponent {
 
   questionary = PurposeSense.getInventary();
 
+  constructor() {
+    this.questionary.items.forEach((item) => {
+      item.valueChoiced = 1;
+    });
+  }
+
   valueChanged() {
-    // try {
-    //   this.result = getInventaryResult(this.questionary);
-    //   this.resultChange.emit(this.result);
-    // } catch (error) {}
+    try {
+      this.result = getInventaryResult(this.questionary);
+      this.resultChange.emit(this.result);
+    } catch (error) {}
   }
 }

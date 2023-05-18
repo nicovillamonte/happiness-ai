@@ -46,8 +46,7 @@
   <mat-step>
     <ng-template matStepLabel>Sentido del proposito</ng-template>
 
-    <!-- TODO -->
-    <purpose-sense></purpose-sense>
+    <purpose-sense [result]="data.purposeSense" (resultChange)="onResultChange($event,'purposeSense')"></purpose-sense>
 
     <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>

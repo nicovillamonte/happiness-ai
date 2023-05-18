@@ -7,9 +7,8 @@
         <p>{{item.left}}</p>
       </td>
       <td class="middle">
-        <!-- Slider -->
-        <mat-slider color="secondary" min="1" max="7" step="1" value="1">
-          <input matSliderThumb>
+        <mat-slider  color="secondary" min="1" max="7" step="1" value="1" (change)="item.valueChoiced = +slider.value; valueChanged()" >
+          <input #slider matSliderThumb >
         </mat-slider>
       </td>
       <td class="rigth">

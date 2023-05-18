@@ -1,5 +1,6 @@
 // import { MentalHealthQuestionaryDTO } from '../DTO/mental-health.dto';
 import { InventaryDTO } from '../DTO/inventary.dto';
+import { PurposeSenseType } from '../DTO/purposeSense.dto';
 import { QuestionaryDTO } from '../DTO/questionary.dto';
 import { SocialRelationType } from '../DTO/socialRelation.dto';
 
@@ -33,4 +34,12 @@ export function resultToSocialRelationType(result: number): SocialRelationType {
     : result <= 11
     ? SocialRelationType.MODERATE
     : SocialRelationType.STRONG;
+}
+
+export function resultToPurposeSenseType(result: number): PurposeSenseType {
+  return result <= 89
+    ? PurposeSenseType.POOR
+    : result <= 104
+    ? PurposeSenseType.UNDEFINED
+    : PurposeSenseType.STRONG;
 }
