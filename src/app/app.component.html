@@ -31,6 +31,7 @@
     <ng-template matStepLabel>Relaciones sociales</ng-template>
 
     <!-- TODO -->
+    <social-realation [result]="data.socialRelation" (resultChange)="onResultChange($event,'socialRelation')"></social-realation>
 
     <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>
