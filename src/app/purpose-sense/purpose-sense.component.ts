@@ -1,17 +1,23 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { FamilyRelation } from '../domain/FamilyRelation';
+import { PurposeSense } from '../domain/PurpouseSense';
 import { getInventaryResult } from '../functions/getResults';
 
 @Component({
-  selector: 'family-relation',
-  templateUrl: './family-relation.component.html',
-  styleUrls: ['./family-relation.component.scss'],
+  selector: 'purpose-sense',
+  templateUrl: './purpose-sense.component.html',
+  styleUrls: ['./purpose-sense.component.scss'],
 })
-export class FamilyRelationComponent {
+export class PurposeSenseComponent {
   @Input() result?: number;
   @Output() resultChange = new EventEmitter<number>();
 
-  questionary = FamilyRelation.getInventary();
+  questionary = PurposeSense.getInventary();
+
+  constructor() {
+    this.questionary.items.forEach((item) => {
+      item.valueChoiced = 1;
+    });
+  }
 
   valueChanged() {
     try {

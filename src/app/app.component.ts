@@ -2,7 +2,11 @@ import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
 import { SocialRelationType } from './DTO/socialRelation.dto';
-import { resultToSocialRelationType } from './functions/getResults';
+import {
+  resultToPurposeSenseType,
+  resultToSocialRelationType,
+} from './functions/getResults';
+import { PurposeSenseType } from './DTO/purposeSense.dto';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +33,7 @@ export class AppComponent {
     emotionalHealth?: number;
     socialRelation?: SocialRelationType;
     familyRelation?: number;
+    purposeSense?: PurposeSenseType;
   } = {
     user: {},
   };
@@ -60,6 +65,10 @@ export class AppComponent {
       case 'familyRelation':
         this.data.familyRelation = newValue;
         console.log(this.data.familyRelation); // Comment
+        break;
+      case 'purposeSense':
+        this.data.purposeSense = resultToPurposeSenseType(newValue);
+        console.log(this.data.purposeSense); // Comment
         break;
     }
   }
