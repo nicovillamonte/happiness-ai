@@ -1,6 +1,8 @@
 import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
+import { SocialRelationType } from './DTO/socialRelation.dto';
+import { resultToSocialRelationType } from './functions/getResults';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +27,7 @@ export class AppComponent {
     };
     mentalHealth?: number;
     emotionalHealth?: number;
+    socialRelation?: SocialRelationType;
   } = {
     user: {},
   };
@@ -48,6 +51,10 @@ export class AppComponent {
       case 'emotionalHealth':
         this.data.emotionalHealth = newValue;
         console.log(this.data.emotionalHealth); // Comment
+        break;
+      case 'socialRelation':
+        this.data.socialRelation = resultToSocialRelationType(newValue);
+        console.log(this.data.socialRelation); // Comment
         break;
     }
   }

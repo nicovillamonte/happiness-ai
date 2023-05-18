@@ -1,5 +1,6 @@
 // import { MentalHealthQuestionaryDTO } from '../DTO/mental-health.dto';
 import { QuestionaryDTO } from '../DTO/questionary.dto';
+import { SocialRelationType } from '../DTO/socialRelation.dto';
 
 export function getResult(questionary: QuestionaryDTO): number {
   let result = 0;
@@ -11,4 +12,12 @@ export function getResult(questionary: QuestionaryDTO): number {
   });
 
   return result;
+}
+
+export function resultToSocialRelationType(result: number): SocialRelationType {
+  return result <= 8
+    ? SocialRelationType.POOR
+    : result <= 11
+    ? SocialRelationType.MODERATE
+    : SocialRelationType.STRONG;
 }
