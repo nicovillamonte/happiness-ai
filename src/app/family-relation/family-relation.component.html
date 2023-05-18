@@ -1,0 +1,35 @@
+<h2>"Cuando estoy en casa, CON MI FAMILIA, más bien me siento..."</h2>
+
+<div class="table-container">
+<table>
+  <tr>
+    <th></th>
+    <th>Totalmente</th>
+    <th>Bastante</th>
+    <th>Algo</th>
+    <th>Algo</th>
+    <th>Bastante</th>
+    <th>Totalmente</th>
+    <th></th>
+  </tr>
+
+  <tr *ngFor="let item of questionary.items; let i = index">
+    <td>{{item.left}}</td>
+    <td
+      *ngFor="let _ of [].constructor(questionary.numberOfValues); let j = index"
+      [ngClass]="j ==  (questionary.numberOfValues / 2) - (questionary.numberOfValues / 2) % 1 ? 'middle-column' : ''">
+        <mat-radio-button
+          [value]="
+              item.order == 0 ?
+                (questionary.startValue ?  questionary.startValue + j : j):
+                (questionary.startValue ?  questionary.numberOfValues - j + questionary.startValue - 1 : questionary.numberOfValues - j - 1)
+          "
+          [name]="'item' + i.toString()"
+          (change)="item.valueChoiced = +$event.value; valueChanged()">
+        </mat-radio-button>
+        <!-- cant-i+startvalue-1 -->
+    </td>
+    <td>{{item.right}}</td>
+  </tr>
+</table>
+</div>

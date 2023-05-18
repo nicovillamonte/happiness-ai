@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.middle-column {
+  border-left-width: 2px;
+  border-left-color: black;
+}
+
+h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+
+  margin-bottom: 1rem;
+}

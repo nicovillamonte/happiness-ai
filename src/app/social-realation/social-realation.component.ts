@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { getResult } from '../functions/getResults';
+import { getQuestionaryResult } from '../functions/getResults';
 import { SocialRelation } from '../domain/SocialRelation';
 
 @Component({
@@ -15,7 +15,7 @@ export class SocialRealationComponent {
 
   valueChanged() {
     try {
-      let res: number = getResult(this.questionary);
+      let res: number = getQuestionaryResult(this.questionary);
 
       this.result = res;
       this.resultChange.emit(res);

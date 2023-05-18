@@ -18,9 +18,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { EmotionalHealthComponent } from './emotional-health/emotional-health.component';
 import { SocialRealationComponent } from './social-realation/social-realation.component';
+import { FamilyRelationComponent } from './family-relation/family-relation.component';
 
 @NgModule({
-  declarations: [AppComponent, InitialDataComponent, MentalHealthComponent, EmotionalHealthComponent, SocialRealationComponent],
+  declarations: [
+    AppComponent,
+    InitialDataComponent,
+    MentalHealthComponent,
+    EmotionalHealthComponent,
+    SocialRealationComponent,
+    FamilyRelationComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

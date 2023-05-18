@@ -28,6 +28,7 @@ export class AppComponent {
     mentalHealth?: number;
     emotionalHealth?: number;
     socialRelation?: SocialRelationType;
+    familyRelation?: number;
   } = {
     user: {},
   };
@@ -55,6 +56,10 @@ export class AppComponent {
       case 'socialRelation':
         this.data.socialRelation = resultToSocialRelationType(newValue);
         console.log(this.data.socialRelation); // Comment
+        break;
+      case 'familyRelation':
+        this.data.familyRelation = newValue;
+        console.log(this.data.familyRelation); // Comment
         break;
     }
   }
