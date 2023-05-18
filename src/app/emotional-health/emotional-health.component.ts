@@ -1,17 +1,17 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { EmotionalHealth } from '../domain/EmotionalHealth';
 import { getResult } from '../functions/getResults';
-import { MentalHealth } from '../domain/MentalHealth';
 
 @Component({
-  selector: 'mental-health',
-  templateUrl: './mental-health.component.html',
-  styleUrls: ['./mental-health.component.scss', '../questionary.scss'],
+  selector: 'emotional-health',
+  templateUrl: './emotional-health.component.html',
+  styleUrls: ['./emotional-health.component.scss', '../questionary.scss'],
 })
-export class MentalHealthComponent {
+export class EmotionalHealthComponent {
   @Input() result?: number;
   @Output() resultChange = new EventEmitter<number>();
 
-  questionary = MentalHealth.getQuestionary();
+  questionary = EmotionalHealth.getQuestionary();
 
   valueChanged() {
     try {
