@@ -11,16 +11,10 @@ import {
   styleUrls: ['./mental-health.component.scss'],
 })
 export class MentalHealthComponent {
-  // @Output() result = new EventEmitter<number>();
-
   @Input() result?: number;
   @Output() resultChange = new EventEmitter<number>();
 
   questionary = new MentalHealth().getQuestionary();
-
-  constructor() {
-    console.log(this.questionary);
-  }
 
   valueChanged() {
     try {

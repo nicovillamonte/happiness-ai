@@ -16,9 +16,17 @@ export class AppComponent {
   continueButtonText: string = 'Continuar';
 
   data: {
+    user: {
+      name?: string;
+      sex?: boolean;
+      age?: number;
+      MBI?: number;
+      country?: string;
+    };
     mentalHealth?: number;
   } = {
     mentalHealth: undefined,
+    user: {},
   };
 
   firstFormGroup = this._formBuilder.group({
@@ -27,8 +35,16 @@ export class AppComponent {
 
   constructor(private _formBuilder: FormBuilder) {}
 
-  onResultChange(newValue: number) {
-    this.data.mentalHealth = newValue;
+  onResultChange(newValue: any, type: string) {
+    switch (type) {
+      case 'user':
+        this.data.user = newValue;
+        console.log(this.data.user);
+        break;
+      case 'mentalHealth':
+        this.data.mentalHealth = newValue;
+        break;
+    }
   }
 
   textContinueButton(event: any) {

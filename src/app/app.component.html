@@ -5,7 +5,7 @@
   <mat-step>
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Datos</ng-template>
-      <initial-data></initial-data>
+      <initial-data [result]="data.user" (resultChange)="onResultChange($event,'user')"></initial-data>
 
       <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
     </form>
@@ -14,7 +14,7 @@
 
   <mat-step>
     <ng-template matStepLabel>Salud mental</ng-template>
-    <mental-health [result]="data.mentalHealth" (resultChange)="onResultChange($event)"></mental-health>
+    <mental-health [result]="data.mentalHealth" (resultChange)="onResultChange($event,'mentalHealth')"></mental-health>
 
     <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>
