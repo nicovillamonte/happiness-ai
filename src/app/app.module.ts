@@ -16,9 +16,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { CdkStepperModule } from '@angular/cdk/stepper';
+import { EmotionalHealthComponent } from './emotional-health/emotional-health.component';
 
 @NgModule({
-  declarations: [AppComponent, InitialDataComponent, MentalHealthComponent],
+  declarations: [AppComponent, InitialDataComponent, MentalHealthComponent, EmotionalHealthComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

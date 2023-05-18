@@ -1,6 +1,7 @@
-import { MentalHealthQuestionaryDTO } from '../DTO/mental-health.dto';
+// import { MentalHealthQuestionaryDTO } from '../DTO/mental-health.dto';
+import { QuestionaryDTO } from '../DTO/questionary.dto';
 
-export const MENTAL_HEALTH_QUEST: MentalHealthQuestionaryDTO = {
+export const MENTAL_HEALTH_QUEST: QuestionaryDTO = {
   questions: [
     {
       question: '1. Tristeza',

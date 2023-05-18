@@ -22,7 +22,7 @@
   <mat-step>
     <ng-template matStepLabel>Salud emocional</ng-template>
 
-    <!-- TODO -->
+    <emotional-health [result]="data.emotionalHealth" (resultChange)="onResultChange($event,'emotionalHealth')"></emotional-health>
 
     <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>

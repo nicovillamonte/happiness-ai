@@ -24,8 +24,8 @@ export class AppComponent {
       country?: string;
     };
     mentalHealth?: number;
+    emotionalHealth?: number;
   } = {
-    mentalHealth: undefined,
     user: {},
   };
 
@@ -39,10 +39,15 @@ export class AppComponent {
     switch (type) {
       case 'user':
         this.data.user = newValue;
-        console.log(this.data.user);
+        console.log(this.data.user); // Comment
         break;
       case 'mentalHealth':
         this.data.mentalHealth = newValue;
+        console.log(this.data.mentalHealth); // Comment
+        break;
+      case 'emotionalHealth':
+        this.data.emotionalHealth = newValue;
+        console.log(this.data.emotionalHealth); // Comment
         break;
     }
   }
