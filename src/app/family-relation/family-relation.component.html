@@ -1,0 +1,35 @@
+<h2>"Cuando estoy en casa, CON MI FAMILIA, más bien me siento..."</h2>
+
+<div class="table-container">
+<table>
+  <tr>
+    <th></th>
+    <th>Totalmente</th>
+    <th>Bastante</th>
+    <th>Algo</th>
+    <th>Algo</th>
+    <th>Bastante</th>
+    <th>Totalmente</th>
+    <th></th>
+  </tr>
+
+  <tr *ngFor="let item of questionary.items; let i = index">
+    <td>{{item.left}}</td>
+    <td
+      *ngFor="let _ of [].constructor(questionary.numberOfValues); let j = index"
+      [ngClass]="j ==  (questionary.numberOfValues / 2) - (questionary.numberOfValues / 2) % 1 ? 'middle-column' : ''">
+        <!-- <input
+          type="radio"
+          id="item1Option1"
+          [value]="questionary.startValue ? questionary.startValue + j : j"
+          [name]="'item' + i.toString()"> -->
+        <mat-radio-button
+          [value]="questionary.startValue ? questionary.startValue + j : j"
+          [name]="'item' + i.toString()">
+        </mat-radio-button>
+    </td>
+    <td>{{item.right}}</td>
+  </tr>
+  <!-- Añade más filas como esta según sea necesario -->
+</table>
+</div>
