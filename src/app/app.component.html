@@ -57,7 +57,7 @@
 
 <ng-template #stepperButtons>
   <div class="buttons">
-    <button mat-stroked-button color="primary" (click)="stepper.previous()">Atras</button>
-    <button mat-raised-button color="primary" (click)="stepper.next()">{{continueButtonText}}</button>
+    <button mat-stroked-button color="primary" (click)="stepper.previous();">Atras</button>
+    <button mat-raised-button color="primary" (click)="isLastStep() ? finish(): stepper.next()">{{continueButtonText}}</button>
   </div>
 </ng-template>

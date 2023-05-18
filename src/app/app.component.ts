@@ -3,10 +3,12 @@ import { Validators, FormBuilder } from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
 import { SocialRelationType } from './DTO/socialRelation.dto';
 import {
+  getTotalResult,
   resultToPurposeSenseType,
   resultToSocialRelationType,
 } from './functions/getResults';
 import { PurposeSenseType } from './DTO/purposeSense.dto';
+import { Data } from './DTO/data.dto';
 
 @Component({
   selector: 'app-root',
@@ -20,21 +22,9 @@ export class AppComponent {
 
   probando!: number;
   continueButtonText: string = 'Continuar';
+  lastStep!: boolean;
 
-  data: {
-    user: {
-      name?: string;
-      sex?: boolean;
-      age?: number;
-      MBI?: number;
-      country?: string;
-    };
-    mentalHealth?: number;
-    emotionalHealth?: number;
-    socialRelation?: SocialRelationType;
-    familyRelation?: number;
-    purposeSense?: PurposeSenseType;
-  } = {
+  data: Data = {
     user: {},
   };
 
@@ -73,8 +63,28 @@ export class AppComponent {
     }
   }
 
+  isLastStep() {
+    return this.lastStep;
+  }
+
+  finish() {
+    console.log('Finalizado: ', this.data);
+
+    // TODO: Result
+    let total = getTotalResult(
+      this.data,
+      39.783726008458174,
+      [
+        9.84990982, 4.8165206, -9.63803728, 9.92686583, -0.38900715,
+        -0.23191042, 0.65613902, 0.10979604,
+      ]
+    );
+    console.log('Total: ', total);
+  }
+
   textContinueButton(event: any) {
     const isLastStep = event.selectedIndex === this.stepper.steps.length - 1;
     this.continueButtonText = isLastStep ? 'Finalizar' : 'Continuar';
+    this.lastStep = isLastStep ? true : false;
   }
 }
