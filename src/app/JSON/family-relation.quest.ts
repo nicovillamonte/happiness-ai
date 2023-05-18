@@ -56,12 +56,12 @@ export const FAMILY_RELATION_QUEST: InventaryDTO = {
     {
       left: 'JOVIAL',
       right: 'MALHUMORADO/A',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'RECONFORTADO/A',
       right: 'DESCONSOLADO/A',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'CRITICADO/A',
@@ -71,7 +71,7 @@ export const FAMILY_RELATION_QUEST: InventaryDTO = {
     {
       left: 'CON PAZ',
       right: 'SIN PAZ',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'DESCONTENTO/A',
@@ -86,12 +86,12 @@ export const FAMILY_RELATION_QUEST: InventaryDTO = {
     {
       left: 'A GUSTO',
       right: 'A DISGUSTO',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'SATISFECHO/A',
       right: 'INSATISFECHO/A',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'COHIBIDO/A',
@@ -106,7 +106,7 @@ export const FAMILY_RELATION_QUEST: InventaryDTO = {
     {
       left: 'ENTENDIDO/A',
       right: 'MALINTERPRETADO/A',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'INCOMODO/A',
@@ -126,7 +126,7 @@ export const FAMILY_RELATION_QUEST: InventaryDTO = {
     {
       left: 'RELAJADO/A',
       right: 'TENSO/A',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'MARGINADO/A',
@@ -141,7 +141,7 @@ export const FAMILY_RELATION_QUEST: InventaryDTO = {
     {
       left: 'TRANQUILO/A',
       right: 'NERVIOSO/A',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'ATACADO/A',
@@ -151,17 +151,17 @@ export const FAMILY_RELATION_QUEST: InventaryDTO = {
     {
       left: 'DICHOSO/A',
       right: 'DESDICHADO/A',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'DESAHOGADO/A',
       right: 'AGOBIADO/A',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'COMPRENDIDO/A',
       right: 'INCOMPRENDIDO/A',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'DISTANTE',
@@ -171,7 +171,7 @@ export const FAMILY_RELATION_QUEST: InventaryDTO = {
     {
       left: 'ESTIMULADO/A',
       right: 'REPRIMIDO/A',
-      order: InventaryOrder.NORMAL,
+      order: InventaryOrder.INVERTED,
     },
     {
       left: 'MAL',

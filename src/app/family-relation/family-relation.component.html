@@ -18,18 +18,18 @@
     <td
       *ngFor="let _ of [].constructor(questionary.numberOfValues); let j = index"
       [ngClass]="j ==  (questionary.numberOfValues / 2) - (questionary.numberOfValues / 2) % 1 ? 'middle-column' : ''">
-        <!-- <input
-          type="radio"
-          id="item1Option1"
-          [value]="questionary.startValue ? questionary.startValue + j : j"
-          [name]="'item' + i.toString()"> -->
         <mat-radio-button
-          [value]="questionary.startValue ? questionary.startValue + j : j"
-          [name]="'item' + i.toString()">
+          [value]="
+              item.order == 0 ?
+                (questionary.startValue ?  questionary.startValue + j : j):
+                (questionary.startValue ?  questionary.numberOfValues - j + questionary.startValue - 1 : questionary.numberOfValues - j - 1)
+          "
+          [name]="'item' + i.toString()"
+          (change)="item.valueChoiced = +$event.value; valueChanged()">
         </mat-radio-button>
+        <!-- cant-i+startvalue-1 -->
     </td>
     <td>{{item.right}}</td>
   </tr>
-  <!-- Añade más filas como esta según sea necesario -->
 </table>
 </div>

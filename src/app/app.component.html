@@ -39,7 +39,7 @@
     <ng-template matStepLabel>Relaciones familiares</ng-template>
 
     <!-- TODO -->
-    <family-relation></family-relation>
+    <family-relation [result]="data.familyRelation" (resultChange)="onResultChange($event,'familyRelation')"></family-relation>
 
     <ng-template [ngTemplateOutlet]="stepperButtons"></ng-template>
   </mat-step>

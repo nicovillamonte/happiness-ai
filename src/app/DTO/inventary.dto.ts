@@ -10,6 +10,7 @@ export interface ItemDTO {
   left: string;
   right: string;
   order?: InventaryOrder;
+  value?: number;
   valueChoiced?: number;
 }
 
