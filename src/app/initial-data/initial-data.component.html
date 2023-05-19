@@ -1,0 +1,26 @@
+<div class="formulary">
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="userData.name" (change)="onValueChange()">
+  </mat-form-field>
+
+  <mat-radio-group [(ngModel)]="userData.sex" (change)="onValueChange()">
+    <mat-radio-button value="0">Hombre</mat-radio-button>
+    <mat-radio-button value="1">Mujer</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field>
+    <mat-label>Edad</mat-label>
+    <input matInput type="number" [(ngModel)]="userData.age" (change)="onValueChange()">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Indice de Masa Corporal (IMC)</mat-label>
+    <input matInput type="number" [(ngModel)]="userData.MBI" (change)="onValueChange()">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Pais</mat-label>
+    <input matInput [(ngModel)]="userData.country" (change)="onValueChange()">
+  </mat-form-field>
+</div>
