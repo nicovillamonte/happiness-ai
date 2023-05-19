@@ -38,27 +38,21 @@ export class AppComponent {
     switch (type) {
       case 'user':
         this.data.user = newValue;
-        console.log(this.data.user); // Comment
         break;
       case 'mentalHealth':
         this.data.mentalHealth = newValue;
-        console.log(this.data.mentalHealth); // Comment
         break;
       case 'emotionalHealth':
         this.data.emotionalHealth = newValue;
-        console.log(this.data.emotionalHealth); // Comment
         break;
       case 'socialRelation':
         this.data.socialRelation = resultToSocialRelationType(newValue);
-        console.log(this.data.socialRelation); // Comment
         break;
       case 'familyRelation':
         this.data.familyRelation = newValue;
-        console.log(this.data.familyRelation); // Comment
         break;
       case 'purposeSense':
         this.data.purposeSense = resultToPurposeSenseType(newValue);
-        console.log(this.data.purposeSense); // Comment
         break;
     }
   }
@@ -70,15 +64,7 @@ export class AppComponent {
   finish() {
     console.log('Finalizado: ', this.data);
 
-    // TODO: Result
-    let total = getTotalResult(
-      this.data,
-      39.783726008458174,
-      [
-        9.84990982, 4.8165206, -9.63803728, 9.92686583, -0.38900715,
-        -0.23191042, 0.65613902, 0.10979604,
-      ]
-    );
+    let total = getTotalResult(this.data);
     console.log('Total: ', total);
   }
 
