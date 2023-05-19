@@ -21,6 +21,8 @@ import { SocialRealationComponent } from './social-realation/social-realation.co
 import { FamilyRelationComponent } from './family-relation/family-relation.component';
 import { PurposeSenseComponent } from './purpose-sense/purpose-sense.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { HappinessResultComponent } from './happiness-result/happiness-result.component';
+import { HappinesFormComponent } from './happines-form/happines-form.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { MatSliderModule } from '@angular/material/slider';
     SocialRealationComponent,
     FamilyRelationComponent,
     PurposeSenseComponent,
+    HappinessResultComponent,
+    HappinesFormComponent,
   ],
   imports: [
     BrowserModule,
