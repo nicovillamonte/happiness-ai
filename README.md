@@ -1,5 +1,9 @@
 # HappinessAi
 
+<p align="center">
+  <img src="https://github.com/nicovillamonte/happiness-ai/assets/64659720/5ac38824-202c-49ba-b7c9-7770a0aaafb5" />
+</p>
+
 Project with didactic purposes for the subject of Programming Paradigms of the University of San Martin (UNSAM) which is based on the creation of a web application that allows users to perform several psychological tests as short as possible in order to obtain a result in percentage of total happiness according to their answers using a Machine Learning model previously trained with a 50k records dataset.
 
 ## Datos del dataset
