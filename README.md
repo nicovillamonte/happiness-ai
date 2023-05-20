@@ -1,27 +1,25 @@
 # HappinessAi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+<p align="center">
+  <img src="https://github.com/nicovillamonte/happiness-ai/assets/64659720/5ac38824-202c-49ba-b7c9-7770a0aaafb5" />
+</p>
 
-## Development server
+Project with didactic purposes for the subject of Programming Paradigms of the University of San Martin (UNSAM) which is based on the creation of a web application that allows users to perform several psychological tests as short as possible in order to obtain a result in percentage of total happiness according to their answers using a Machine Learning model previously trained with a 50k records dataset.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Datos del dataset
 
-## Code scaffolding
+The dataset consists of 50k records with 12 columns, the model is trained with 6 of them, which are considered the most relevant to the final result. Therefore, the important thing that is being analyzed in the test are numerical values (obtained from the results of questionnaires, inventories and psychological scales) of variables such as mental health, BMI (Body Mass Index), emotional health, social relationships and family and a sense of purpose.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Official web
+
+This is the official web of the project: [Happiness AI](https://felicidad.nicolasvillamonte.com)
+
+## Running the project
+
+Install dependencies running `npm i`
+
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

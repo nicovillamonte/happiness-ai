@@ -43,7 +43,7 @@ export const SOCIAL_RELATION_QUEST: QuestionaryDTO = {
     },
     {
       question:
-        '¿Qué tan fácil es obtener ayuda práctica de tus vecinos si la necesitas?',
+        '¿Qué tan fácil es obtener ayuda práctica de tu círculo si la necesitas?',
       options: [
         {
           answer: 'Muy difícil',
