@@ -24,21 +24,11 @@ export class SocialRelation {
   }
 
   static toBinary(type: SocialRelationType, index?: number): any {
-    // console.log('BINARY');
-    // console.log('Analizamos type: ', type);
-    // console.log('Index: ', index);
     let socialRelationType = SOCIAL_RELATION_CLASSIFICATION.values.find(
       (value) => {
         return value.type == type;
       }
     );
-
-    // console.log('socialType: ', socialRelationType);
-    // console.log('socialType value: ', socialRelationType?.value);
-
-    // if (index != null)
-    //   console.log('getBit: ', socialRelationType?.value.getBit(index));
-    // else console.log('getBinary: ', socialRelationType?.value.getBinary());
 
     return index != null
       ? socialRelationType?.value.getBit(index)

@@ -16,20 +16,9 @@ export class PurposeSense {
   }
 
   static toBinary(type: PurposeSenseType, index?: number): any {
-    // console.log('Analizamos type: ', type);
-    // console.log('Index: ', index);
     let purpouseType = PURPOSE_SENSE_CLASSIFICATION.values.find((value) => {
-      console.log(value.type, ' == ', type);
       return value.type == type;
     });
-
-    // console.log('purpouseType: ', purpouseType);
-    // console.log('purpouseType value: ', purpouseType?.value);
-
-    // if (index != null)
-    //   console.log('getBit: ', purpouseType?.value.getBit(index));
-    // else console.log('getBinary: ', purpouseType?.value.getBinary());
-
     return index != null
       ? purpouseType?.value.getBit(index)
       : purpouseType?.value.getBinary();
