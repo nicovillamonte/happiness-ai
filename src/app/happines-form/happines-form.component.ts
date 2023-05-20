@@ -8,6 +8,7 @@ import {
   resultToSocialRelationType,
 } from '../functions/getResults';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-happines-form',
@@ -30,7 +31,11 @@ export class HappinesFormComponent {
     firstCtrl: ['', Validators.required],
   });
 
-  constructor(private _formBuilder: FormBuilder, private router: Router) {}
+  constructor(
+    private _formBuilder: FormBuilder,
+    private router: Router,
+    private snackBar: MatSnackBar
+  ) {}
 
   onResultChange(newValue: any, type: string) {
     switch (type) {
@@ -60,9 +65,11 @@ export class HappinesFormComponent {
   }
 
   finish() {
-    console.log('Finalizado: ', this.data);
-
     let total = getTotalResult(this.data);
+    if (isNaN(total) || total == null || total == undefined) {
+      this.errorSnackBar();
+      throw Error('Todos los campos son obligatorios.');
+    }
     this.router.navigate(['/happiness', Math.round(total)]);
   }
 
@@ -72,7 +79,12 @@ export class HappinesFormComponent {
     this.lastStep = isLastStep ? true : false;
   }
 
-  back() {}
-
-  git() {}
+  errorSnackBar() {
+    //error snackbar
+    this.snackBar.open('Todos los campos son obligatorios.', 'De acuerdo', {
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+    });
+  }
 }

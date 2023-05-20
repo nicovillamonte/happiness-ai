@@ -55,7 +55,6 @@ export function getTotalResult(data: Data): number {
   const purp2 = PurposeSense.toBinary(data.purposeSense!, 1);
   const social1 = SocialRelation.toBinary(data.socialRelation!, 0);
   const social2 = SocialRelation.toBinary(data.socialRelation!, 1);
-  console.log('A partir de aca', purp1, purp2, social1, social2);
 
   let result =
     9.84990982 * purp1 +

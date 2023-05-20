@@ -23,6 +23,7 @@ import { PurposeSenseComponent } from './purpose-sense/purpose-sense.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { HappinessResultComponent } from './happiness-result/happiness-result.component';
 import { HappinesFormComponent } from './happines-form/happines-form.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { HappinesFormComponent } from './happines-form/happines-form.component';
     MatButtonModule,
     CdkStepperModule,
     MatSliderModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
