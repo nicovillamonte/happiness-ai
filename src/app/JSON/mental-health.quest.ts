@@ -13,7 +13,7 @@ export const MENTAL_HEALTH_QUEST: QuestionaryDTO = {
           answer: 'Me siento triste gran parte del tiempo.',
         },
         {
-          answer: 'Me siento trist todo el tiempo.',
+          answer: 'Me siento triste todo el tiempo.',
         },
         {
           answer:
