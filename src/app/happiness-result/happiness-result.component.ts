@@ -10,6 +10,7 @@ export class HappinessResultComponent {
   result = this.route.snapshot.paramMap.get('result');
 
   resultSave = this.result;
+  calificativeResult = 'Eres una persona feliz.';
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
@@ -18,6 +19,11 @@ export class HappinessResultComponent {
 
   ngOnInit() {
     this.startLoading();
+    let numericResult = parseInt(this.result!!);
+
+    if (numericResult < 54) {
+      this.calificativeResult = 'No te autopercibes como una persona feliz.';
+    }
   }
 
   startLoading() {

@@ -3,6 +3,7 @@
   <div class="result-text">
     <h1>{{progress < 100 ? 'CALCULANDO FELICIDAD' : 'RESULTADO'}}: </h1>
     <p>{{result}}%</p>
+    <p class="clasif" *ngIf="progress > 100">{{calificativeResult}}</p>
   </div>
 
   <div class="loading-container" *ngIf="progress <= 100" [ngStyle]="progress > 100 ? {visibility: 'hidden'}: null">
