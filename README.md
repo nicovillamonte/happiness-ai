@@ -6,7 +6,7 @@
 
 Project with didactic purposes for the subject of Programming Paradigms of the University of San Martin (UNSAM) which is based on the creation of a web application that allows users to perform several psychological tests as short as possible in order to obtain a result in percentage of total happiness according to their answers using a Machine Learning model previously trained with a 50k records dataset.
 
-## Datos del dataset
+## Dataset
 
 The dataset consists of 50k records with 12 columns, the model is trained with 6 of them, which are considered the most relevant to the final result. Therefore, the important thing that is being analyzed in the test are numerical values (obtained from the results of questionnaires, inventories and psychological scales) of variables such as mental health, BMI (Body Mass Index), emotional health, social relationships and family and a sense of purpose.
 
